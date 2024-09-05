@@ -13,6 +13,17 @@ function avanzar(x, y, orientacion, maxX, maxY) {
     let [x, y, orientacion] = posicionInicial.match(/(\d+),(\d+)([NESO])/).slice(1);
     x = parseInt(x);
     y = parseInt(y);
-  }
   
+    for (let movimiento of movimientos) {
+      if (movimiento === "I") {
+        orientacion = girarIzquierda(orientacion);
+      } else if (movimiento === "D") {
+        orientacion = girarDerecha(orientacion);
+      } else if (movimiento === "A") {
+        [x, y] = avanzar(x, y, orientacion, maxX, maxY);
+      }
+    }
+  
+    return `${x},${y}${orientacion}`;
+  }
   
