@@ -26,4 +26,16 @@ function avanzar(x, y, orientacion, maxX, maxY) {
   
     return `${x},${y}${orientacion}`;
   }
+
+  function girarIzquierda(orientacion) {
+    const giros = { "N": "O", "O": "S", "S": "E", "E": "N" };
+    return giros[orientacion];
+  }
+  
+  function girarDerecha(orientacion) {
+    const giros = { "N": "E", "E": "S", "S": "O", "O": "N" };
+    return giros[orientacion];
+  }
+  
+  export default ejecutarComandos;
   
