@@ -5,5 +5,14 @@ function avanzar(x, y, orientacion, maxX, maxY) {
     else if (orientacion === "O" && x > 0) x--;
     return [x, y];
   }
+  function ejecutarComandos(comandos) {
+    const [dimensiones, posicionInicial, movimientos] = comandos.split("/");
+  
+    const [maxX, maxY] = dimensiones.split(",").map(Number);
+  
+    let [x, y, orientacion] = posicionInicial.match(/(\d+),(\d+)([NESO])/).slice(1);
+    x = parseInt(x);
+    y = parseInt(y);
+  }
   
   
