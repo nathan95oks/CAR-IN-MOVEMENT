@@ -13,3 +13,8 @@ test('Debe devolver la posición final correcta para el ejemplo 2', () => {
 test('Debe manejar el borde de la superficie correctamente', () => {
   expect(ejecutarComandos('5,5/0,0S/AA')).toBe('0,0S');
 });
+
+test('Debe ejecutar correctamente los comandos de giro', () => {
+  expect(ejecutarComandos('5,5/2,2N/IDID')).toBe('2,2N');
+});
+
