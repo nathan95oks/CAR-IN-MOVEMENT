@@ -5,3 +5,7 @@ describe('Simulador de Autitos', () => {
     expect(ejecutarComandos('5,5/1,2N/IAIAIAIAA')).toBe('1,3N');
   });
 });
+
+test('Debe devolver la posición final correcta para el ejemplo 2', () => {
+  expect(ejecutarComandos('5,5/3,3E/AADAADADDA')).toBe('5,1E');
+});
